@@ -1,43 +1,64 @@
 .skills {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 }
 
-.skills .tools ul {
+.skills h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff; /* cor de destaque */
+}
+
+.skills .tools ul,
+.skills .personal ul {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
     flex-wrap: wrap;
+    gap: 1rem; /* espaçamento consistente entre itens */
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
+/* Ícones das ferramentas */
 .skills .tools ul li img {
-    max-width: 50px;
-    max-height: 50px;
-    margin: 0 .5rem;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.skills .personal ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
+.skills .tools ul li img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 6px rgba(255, 75, 139, 0.6));
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 20%;
 }
 
+/* Soft skills */
 .skills .personal ul li {
-    margin-left: 2rem;
-    padding: .5rem
+    padding: .5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+.skills .personal ul li:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Layout em 2 colunas no desktop */
 @media only screen and (min-width: 768px) {
     .skills {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 2rem;
     }
 }

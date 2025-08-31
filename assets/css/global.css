@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    transition: all 0.2s ease-in-out;
 }
 
 @font-face {
@@ -12,6 +13,11 @@ body {
     background-color: #000;
     color: #fff;
 }
+
+h1, h2, h3 {
+    font-family: 'Neue Machina', 'Open Sans', sans-serif;
+}
+
 
 a {
     color: #fff;
